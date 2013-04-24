@@ -10,16 +10,26 @@
 				//alert("hey");
                 $.ajax({
 					type:"POST",
-					url:"http://166.78.193.53/APPSintesis/php/slideprincipal.php",
+					url:"http://192.168.1.115/curso/pruebas.php",
 					data:"accion=leer"
 					}).done(function(msg){
 						datos = JSON.parse(msg);
-							
+						
+						for(i=0;i<datos.length;i++)
+							{
+								alert(msg);
+								/*for(var dat in datos)
+								{
 									
+									alert(msg); 
+									//jljllj
 									$('table').append('<tr>'+
-									'<td>'+datos+'</td>'+
+									'<td>'+datos[i].id+'</td>'+
+									'<td>'+datos[i].dat1+'</td>'+
+									'<td>'+datos[i].dat2+'</td>'+
 									'</tr>');
-							
+								}*/
+							}
 						});
             });
 		
